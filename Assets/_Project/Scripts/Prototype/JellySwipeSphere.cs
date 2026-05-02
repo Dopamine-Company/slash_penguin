@@ -28,6 +28,9 @@ public class JellySwipeSphere : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private Camera targetCamera;
 
+    [Header("Linked Reactions")]
+    [SerializeField] private BodyReactionController bodyReaction;
+
     private Collider targetCollider;
     private Vector2 pointerDownPosition;
     private bool isPointerTracking;
@@ -178,6 +181,11 @@ public class JellySwipeSphere : MonoBehaviour
             punchDuration,
             vibrato,
             elasticity);
+
+        if (bodyReaction != null)
+        {
+            bodyReaction.PlayFlinch(swipeDelta, power);
+        }
     }
 
     private Vector3 ConvertScreenDirectionToLocalDirection(Vector2 screenDirection)

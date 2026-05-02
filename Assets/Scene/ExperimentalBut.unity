@@ -226,8 +226,8 @@ Transform:
   m_GameObject: {fileID: 17482370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0.2218, z: -6.28}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.787, y: 0.61, z: -5.225}
+  m_LocalScale: {x: 1.29, y: 1.29, z: 1.29}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -245,6 +245,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellySwipeSphere
   minSwipeDistance: 80
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 51
+  hitMaxDistance: 100
   pushDistance: 0.35
   reboundRatio: 0.45
   pushDuration: 0.05
@@ -255,6 +259,7 @@ MonoBehaviour:
   vibrato: 8
   elasticity: 0.7
   targetCamera: {fileID: 650214442}
+  bodyReaction: {fileID: 2139018711}
 --- !u!1 &186040431
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +293,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JellySwipeSphere
   minSwipeDistance: 80
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 51
+  hitMaxDistance: 100
   pushDistance: 0.35
   reboundRatio: 0.45
   pushDuration: 0.05
@@ -298,6 +307,7 @@ MonoBehaviour:
   vibrato: 8
   elasticity: 0.7
   targetCamera: {fileID: 650214442}
+  bodyReaction: {fileID: 2139018711}
 --- !u!135 &186040433
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -385,8 +395,8 @@ Transform:
   m_GameObject: {fileID: 186040431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 0.2218, z: -6.32}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.01, y: 0.48, z: -5.25}
+  m_LocalScale: {x: 1.21, y: 1.21, z: 1.21}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -483,6 +493,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1000131287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+  m_PrefabInstance: {fileID: 1140366148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1000131291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000131287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f1292dcb00b854798b59964f7d086f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JellySwipeSphere
+  minSwipeDistance: 80
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 51
+  hitMaxDistance: 100
+  pushDistance: 0.35
+  reboundRatio: 0.45
+  pushDuration: 0.05
+  reboundDuration: 0.09
+  returnDuration: 0.16
+  punchScale: {x: 0.22, y: -0.12, z: 0.22}
+  punchDuration: 0.22
+  vibrato: 8
+  elasticity: 0.7
+  targetCamera: {fileID: 0}
+  bodyReaction: {fileID: 0}
+--- !u!1001 &1140366148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2139018710}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.684215
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.684215
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.684215
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.54926
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.2296305
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.15025382
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.98864746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -162.717
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_Name
+      value: PenguinBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.084
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1000131291}
+  m_SourcePrefab: {fileID: 100100000, guid: c61f73549f43295488183e76c62e7f14, type: 3}
 --- !u!1 &1178836735
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +703,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1916028374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c61f73549f43295488183e76c62e7f14, type: 3}
+  m_PrefabInstance: {fileID: 1140366148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2139018709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139018710}
+  - component: {fileID: 2139018711}
+  m_Layer: 0
+  m_Name: Penguin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139018710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139018709}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.44926, y: -0, z: 1.92963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1916028374}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139018711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139018709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be9fbd60278ec44291145d18ca20acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BodyReactionController
+  flinchDistance: 0.08
+  flinchDuration: 0.045
+  returnDuration: 0.12
+  rotationDegrees: 5
+  flinchScale: {x: 0.04, y: -0.03, z: 0.04}
+  minPowerMultiplier: 0.65
+  maxPowerMultiplier: 1.1
+  targetCamera: {fileID: 650214442}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -588,3 +769,4 @@ SceneRoots:
   - {fileID: 1178836737}
   - {fileID: 17482374}
   - {fileID: 186040436}
+  - {fileID: 2139018710}
