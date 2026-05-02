@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a8049a25c0d4e459cd381b9d5d1ed8, type: 3}
+  m_Name: PenguinGameSettings
+  m_EditorClassIdentifier: Assembly-CSharp::Dopamine.SlashPenguin.PenguinGameSettings
+  pantyPullThreshold: -1.5
+  pantySwipeSensitivity: 0.005
+  buttockActiveDuration: 1.5
+  buttockCooldownDuration: 0.5
+  buttockScaleMultiplier: 1.4
+  buttockScaleDuration: 0.3
+  rednessIncrement: 0.2
+  rednessDecrement: 0.1
+  fartThreshold: 4
+  poopCoverDuration: 1
+  swipeMinDistance: 50

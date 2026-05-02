@@ -109,6 +109,7 @@ InitTestScene*.unity*
 /.agents/
 /.claude/settings.local.json
 /.mcp.json
+.mcp.json
 
 # IDE/editor local state
 .idea/
