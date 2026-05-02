@@ -30,11 +30,14 @@ public class JellySwipeSphere : MonoBehaviour
 
     [Header("Linked Reactions")]
     [SerializeField] private BodyReactionController bodyReaction;
+    [SerializeField] private GameLoopController gameLoopController;
+    [SerializeField] private ButtTarget buttTarget = ButtTarget.None;
 
     private Collider targetCollider;
     private Vector2 pointerDownPosition;
     private bool isPointerTracking;
     private bool didPointerTouchThisSphere;
+    private bool didRegisterHitThisPointer;
 
     private Vector3 baseLocalPosition;
     private Vector3 baseLocalScale;
@@ -117,6 +120,12 @@ public class JellySwipeSphere : MonoBehaviour
         pointerDownPosition = screenPosition;
         isPointerTracking = true;
         didPointerTouchThisSphere = IsPointerOverThisSphere(screenPosition);
+        didRegisterHitThisPointer = false;
+
+        if (didPointerTouchThisSphere)
+        {
+            RegisterButtHit();
+        }
     }
 
     private void UpdatePointerPath(Vector2 screenPosition)
@@ -127,6 +136,11 @@ public class JellySwipeSphere : MonoBehaviour
         }
 
         didPointerTouchThisSphere = IsPointerOverThisSphere(screenPosition);
+
+        if (didPointerTouchThisSphere)
+        {
+            RegisterButtHit();
+        }
     }
 
     private void EndPointer(Vector2 screenPosition)
@@ -143,10 +157,12 @@ public class JellySwipeSphere : MonoBehaviour
         if (!didPointerTouchThisSphere || swipeDelta.magnitude < minSwipeDistance)
         {
             didPointerTouchThisSphere = false;
+            didRegisterHitThisPointer = false;
             return;
         }
 
         didPointerTouchThisSphere = false;
+        didRegisterHitThisPointer = false;
         PlayJellyReaction(swipeDelta);
     }
 
@@ -226,6 +242,17 @@ public class JellySwipeSphere : MonoBehaviour
         }
 
         return targetCollider.Raycast(ray, out _, hitMaxDistance);
+    }
+
+    private void RegisterButtHit()
+    {
+        if (didRegisterHitThisPointer || gameLoopController == null || buttTarget == ButtTarget.None)
+        {
+            return;
+        }
+
+        didRegisterHitThisPointer = true;
+        gameLoopController.RegisterButtHit(buttTarget);
     }
 
     private void CacheBaseTransform()
