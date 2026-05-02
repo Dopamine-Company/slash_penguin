@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d29282a9fcbe76e48a0be594f1806a3d
+timeCreated: 1470658588
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Demo/CameraCircularMotion.anim
+  uploadId: 240333

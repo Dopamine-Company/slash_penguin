@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 238c49bc8539e2f4b970d0d34d344aae
+timeCreated: 1471397956
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/RotateCheckerboardTransitioner.prefab
+  uploadId: 240333

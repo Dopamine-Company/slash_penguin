@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70b217c7d8009044a81360b9a4866dec
+timeCreated: 1518831457
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/Prefabs/Animation/FadeToBlack.anim
+  uploadId: 901778

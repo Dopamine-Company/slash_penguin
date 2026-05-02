@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f599203711c2814e946f792fb91a322
+timeCreated: 1518831435
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/Demo/Animation/DemoSceneTransitionAnimatorController.controller
+  uploadId: 901778

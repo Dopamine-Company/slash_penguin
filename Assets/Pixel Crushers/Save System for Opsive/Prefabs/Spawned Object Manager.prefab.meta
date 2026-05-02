@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b5134433e4d7a364b867afa2d944b010
+timeCreated: 1509224279
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/Prefabs/Spawned Object
+    Manager.prefab
+  uploadId: 901778

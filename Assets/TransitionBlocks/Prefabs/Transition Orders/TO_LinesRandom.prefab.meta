@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f714440ba498b14cb01c87b3295e40b
+timeCreated: 1470598631
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_LinesRandom.prefab
+  uploadId: 240333

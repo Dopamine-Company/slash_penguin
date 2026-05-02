@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2144619f6b587cf4793a4afcfa31a1af
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Shaders/ObjectColor.shadergraph
+  uploadId: 451121

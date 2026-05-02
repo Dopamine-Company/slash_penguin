@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5454e011677983e4a86a7548d1420960
+timeCreated: 1509224480
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/Prefabs/Checkpoint Save.prefab
+  uploadId: 901778

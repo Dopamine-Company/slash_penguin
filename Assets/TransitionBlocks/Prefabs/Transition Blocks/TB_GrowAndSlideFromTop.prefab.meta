@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fbb4f06b66d0a0448adb2f38c9b396bc
+timeCreated: 1470638928
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowAndSlideFromTop.prefab
+  uploadId: 240333

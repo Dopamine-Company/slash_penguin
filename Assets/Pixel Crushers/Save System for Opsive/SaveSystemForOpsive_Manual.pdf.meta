@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be0bb433621330940afdac160a0427bc
+timeCreated: 1509250124
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/SaveSystemForOpsive_Manual.pdf
+  uploadId: 901778

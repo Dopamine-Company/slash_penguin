@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 94bb201c5e11a0a4c8ef37555abb91fb
+timeCreated: 1472002305
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Demo/RandomCameraColor.cs
+  uploadId: 240333

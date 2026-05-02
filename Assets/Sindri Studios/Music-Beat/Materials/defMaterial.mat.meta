@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9c50a1505def74e48bcc2dfa366d9b2e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Materials/defMaterial.mat
+  uploadId: 451121

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 696405ca4c8ed4046b98f81010272e43
+timeCreated: 1470598238
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_CornerWipeTopLeft.prefab
+  uploadId: 240333

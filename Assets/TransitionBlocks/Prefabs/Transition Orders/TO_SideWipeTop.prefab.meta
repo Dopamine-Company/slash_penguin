@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45dd2fe09f8c1e940bfc565a34a7aec3
+timeCreated: 1470598758
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_SideWipeTop.prefab
+  uploadId: 240333

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d2aad48d91375ae4682f083f52bfbf2d
+timeCreated: 1470598106
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_TeethVertical.prefab
+  uploadId: 240333

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f90386581df429849bcd7b6f99b606b9
+timeCreated: 1518831435
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 146693
+  packageName: Save System for Opsive Character Controllers
+  packageVersion: 2.0.14
+  assetPath: Assets/Pixel Crushers/Save System for Opsive/Prefabs/Animation/Animation
+    With LoadingScreen/LoadingScreenTransitionAnimatorController.controller
+  uploadId: 901778

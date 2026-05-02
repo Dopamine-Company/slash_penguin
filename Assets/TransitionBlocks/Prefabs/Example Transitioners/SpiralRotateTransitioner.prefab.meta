@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f16a146f53841c04caa6ebd60c710af1
+timeCreated: 1471707230
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/SpiralRotateTransitioner.prefab
+  uploadId: 240333

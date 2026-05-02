@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b35c02280a8e29542836191203fb345e
+timeCreated: 1470152624
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Scripts/Transition Orders/TransitionOrderAllAtOnce.cs
+  uploadId: 240333

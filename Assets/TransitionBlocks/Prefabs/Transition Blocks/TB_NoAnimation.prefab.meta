@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1899ee002628484fa818214929531e5
+timeCreated: 1470760312
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_NoAnimation.prefab
+  uploadId: 240333

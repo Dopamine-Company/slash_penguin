@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fec4bd8d243b73040ad8ecc2576b3f50
+timeCreated: 1469325443
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowAndWobble.prefab
+  uploadId: 240333

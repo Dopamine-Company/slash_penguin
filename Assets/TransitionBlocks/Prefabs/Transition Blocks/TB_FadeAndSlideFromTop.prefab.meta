@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 733bb9dca5aa5764e94cbaa6c779847a
+timeCreated: 1469306565
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_FadeAndSlideFromTop.prefab
+  uploadId: 240333

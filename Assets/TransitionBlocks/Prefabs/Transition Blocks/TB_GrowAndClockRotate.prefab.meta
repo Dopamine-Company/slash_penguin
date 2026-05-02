@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f0685f027503dbe40bf9446d12499e13
+timeCreated: 1469327609
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowAndClockRotate.prefab
+  uploadId: 240333

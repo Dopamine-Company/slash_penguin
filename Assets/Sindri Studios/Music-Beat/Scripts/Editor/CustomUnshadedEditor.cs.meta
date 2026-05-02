@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1a83c8e2034ee364cafcf344fc130c28
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Scripts/Editor/CustomUnshadedEditor.cs
+  uploadId: 451121

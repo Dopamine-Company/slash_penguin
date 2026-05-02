@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7582133bbda9e5a4f9aa777a939346d7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Audios/AudioMixer.mixer
+  uploadId: 451121

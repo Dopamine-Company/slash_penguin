@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 482339e2c45f8904694e8bb82750a449
+timeCreated: 1471706832
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/RedBubbleDropTransitioner.prefab
+  uploadId: 240333

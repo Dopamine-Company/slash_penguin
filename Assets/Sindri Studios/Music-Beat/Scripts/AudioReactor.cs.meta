@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3a864a24886af0740af11863b4e467f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Scripts/AudioReactor.cs
+  uploadId: 451121

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d4af0d3de92ef5a42959b91b3292aa85
+timeCreated: 1469307841
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowAndRotateClockwise.prefab
+  uploadId: 240333

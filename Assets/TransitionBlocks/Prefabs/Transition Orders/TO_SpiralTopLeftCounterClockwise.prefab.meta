@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4ab0658390efe04994bffa986736442
+timeCreated: 1470598827
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_SpiralTopLeftCounterClockwise.prefab
+  uploadId: 240333

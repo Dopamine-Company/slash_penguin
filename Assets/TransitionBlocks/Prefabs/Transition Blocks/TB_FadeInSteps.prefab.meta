@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fb2c3eb951de8b54fa28fd715ff04aeb
+timeCreated: 1470757923
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_FadeInSteps.prefab
+  uploadId: 240333

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d1783cf6d902f94c886b34a7d37cbb5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Animations/Clips/Idle.anim
+  uploadId: 451121

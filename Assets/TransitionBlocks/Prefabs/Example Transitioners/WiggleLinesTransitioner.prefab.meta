@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9ae79a41694d3b946b7f6b253556fce1
+timeCreated: 1471399663
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/WiggleLinesTransitioner.prefab
+  uploadId: 240333

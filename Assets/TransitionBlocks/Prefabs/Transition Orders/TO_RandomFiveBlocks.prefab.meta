@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0b5c4715a7d9e304491dcff2b86408b3
+timeCreated: 1470598160
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_RandomFiveBlocks.prefab
+  uploadId: 240333

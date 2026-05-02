@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dd3056dff9661e4498ebcb345ff723e9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Prefabs/GlowingCamera.prefab
+  uploadId: 451121

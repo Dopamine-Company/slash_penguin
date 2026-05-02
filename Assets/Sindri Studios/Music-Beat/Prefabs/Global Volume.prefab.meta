@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 099252f184f92404d8c83c360c78711d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Prefabs/Global Volume.prefab
+  uploadId: 451121

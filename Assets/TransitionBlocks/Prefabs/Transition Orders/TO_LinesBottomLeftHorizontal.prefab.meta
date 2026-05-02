@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 21de1fc981aba754cb61ebebf52223c3
+timeCreated: 1470598681
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_LinesBottomLeftHorizontal.prefab
+  uploadId: 240333

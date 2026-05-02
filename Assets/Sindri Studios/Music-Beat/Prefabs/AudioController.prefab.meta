@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 794e12609b1f6ce4ba66070b4bfc9a63
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192722
+  packageName: Music Beat - Audio Visualizer
+  packageVersion: 1.4.2
+  assetPath: Assets/Sindri Studios/Music-Beat/Prefabs/AudioController.prefab
+  uploadId: 451121

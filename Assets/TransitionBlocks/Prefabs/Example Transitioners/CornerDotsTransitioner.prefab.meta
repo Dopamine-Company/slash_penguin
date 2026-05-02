@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ecc933e666b3d134db0145b10faa2068
+timeCreated: 1471223358
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/CornerDotsTransitioner.prefab
+  uploadId: 240333

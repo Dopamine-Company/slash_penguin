@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f03459802e44af844b2351a8be5c8f9c
+timeCreated: 1471222771
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/VerticalBarsTransitioner.prefab
+  uploadId: 240333

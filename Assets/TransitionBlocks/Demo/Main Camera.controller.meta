@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55314be00cedd4248918e9f7e03cbb51
+timeCreated: 1470658589
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Demo/Main Camera.controller
+  uploadId: 240333

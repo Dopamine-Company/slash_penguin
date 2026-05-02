@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5111ee4a1dcc64945aabbbc848673958
+timeCreated: 1470598838
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_SpiralRandom.prefab
+  uploadId: 240333

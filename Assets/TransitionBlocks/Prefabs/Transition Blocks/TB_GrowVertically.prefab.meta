@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a9419114288488c41a71bccae170caeb
+timeCreated: 1469326113
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowVertically.prefab
+  uploadId: 240333

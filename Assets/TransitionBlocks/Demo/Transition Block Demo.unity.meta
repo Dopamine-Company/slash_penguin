@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dd882a9150b257d4d83088c2a8caf0ec
+timeCreated: 1470658014
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Demo/Transition Block Demo.unity
+  uploadId: 240333

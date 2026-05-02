@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec98876ddd614254ebb229b09cbe4fa4
+timeCreated: 1469326722
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowAndTwist.prefab
+  uploadId: 240333

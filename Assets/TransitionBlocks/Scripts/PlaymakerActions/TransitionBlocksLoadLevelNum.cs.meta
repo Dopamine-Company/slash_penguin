@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 66e621da76126534cae04a1b3328c259
+timeCreated: 1513191244
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Scripts/PlaymakerActions/TransitionBlocksLoadLevelNum.cs
+  uploadId: 240333

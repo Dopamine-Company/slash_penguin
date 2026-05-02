@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 05b1d03e0b9aab34785aebc923359833
+timeCreated: 1471116108
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Blocks/TB_GrowSidewaysAndSlightRotate.prefab
+  uploadId: 240333

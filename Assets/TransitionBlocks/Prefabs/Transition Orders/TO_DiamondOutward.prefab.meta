@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 390c97dfcdd045646a5c8d39eab0aca3
+timeCreated: 1469371784
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Transition Orders/TO_DiamondOutward.prefab
+  uploadId: 240333

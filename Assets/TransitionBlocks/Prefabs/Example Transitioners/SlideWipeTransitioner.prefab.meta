@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f56677cc419404a4d94df9c2ea9a8279
+timeCreated: 1471395141
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/SlideWipeTransitioner.prefab
+  uploadId: 240333

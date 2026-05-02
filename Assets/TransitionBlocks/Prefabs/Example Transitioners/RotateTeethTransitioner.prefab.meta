@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2a11f1d68a60d2a418fbbcbf0f6a2d05
+timeCreated: 1471223929
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 69448
+  packageName: Transition Blocks
+  packageVersion: 1.6
+  assetPath: Assets/TransitionBlocks/Prefabs/Example Transitioners/RotateTeethTransitioner.prefab
+  uploadId: 240333
