@@ -104,3 +104,21 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Local AI/editor tooling state
+/.agents/
+/.claude/settings.local.json
+/.mcp.json
+
+# IDE/editor local state
+.idea/
+.vscode/
+*.rsuser
+*.sln.docstates
+*.userosscache
+
+# Unity local build/cache byproducts
+/[Aa]ssets/Plugins/Editor/JetBrains.meta
+/[Bb]uild[Rr]eports/
+/[Cc]rash[Rr]eports/
+/[Uu]ser[Ss]ettings/

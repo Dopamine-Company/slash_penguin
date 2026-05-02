@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "unity": {
-      "command": "node",
-      "args": ["C:\\Users\\swu\\Documents\\GitHub\\unity-mcp\\server\\build\\bin\\cli.js"]
-    }
-  }
-}
