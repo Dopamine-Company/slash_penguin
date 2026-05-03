@@ -23,10 +23,20 @@ public class Intro : MonoBehaviour
     [SerializeField] private float zoomOutDuration = 1f;
     [Header("IntroButtiesScale")]
     [SerializeField] private float introButtiesZoomInScaleMultiplier = 1.08f;
+    [Header("Scene Transition")]
+    [SerializeField] private bool loadGameLoopWhenZoomInComplete = true;
+    [SerializeField] private string gameLoopSceneName = "GameLoop";
+    [SerializeField] private Transform transitionLeftButt;
+    [SerializeField] private Transform transitionRightButt;
+    [SerializeField] private float holdBeforeConvergeDuration = 0.15f;
+    [SerializeField] private float convergeDuration = 0.75f;
+    [SerializeField] private float autoStartDelay = 3f;
+    [SerializeField] private Ease convergeEase = Ease.InOutSine;
 
     private Transform cameraTransform;
     private Sequence introSequence;
     private bool _introStarted;
+    private bool sceneTransitionStarted;
 
     private void Start()
     {
@@ -83,7 +93,18 @@ public class Intro : MonoBehaviour
         {
             ApplyAfterZoomInReachedTargetZ();
             SnapHitButtiesToZoomInScale(hitButtieScaleEntries);
+
+            if (loadGameLoopWhenZoomInComplete)
+            {
+                StartGameLoopSceneTransition();
+            }
         });
+
+        if (loadGameLoopWhenZoomInComplete)
+        {
+            return;
+        }
+
         introSequence.Append(cameraTransform.DOMove(startPos, zoomOutDuration).SetEase(Ease.InOutQuad));
         JoinIntroButtiesScale(introSequence, introButtieScaleEntries, zoomOutDuration, 1f);
         JoinIntroButtiesScale(introSequence, hitButtieScaleEntries, zoomOutDuration, 1f);
@@ -249,5 +270,44 @@ public class Intro : MonoBehaviour
 
         _introStarted = true;
         RunIntroCamera();
+    }
+
+    private void StartGameLoopSceneTransition()
+    {
+        if (sceneTransitionStarted)
+        {
+            return;
+        }
+
+        sceneTransitionStarted = true;
+
+        Transform leftSource = transitionLeftButt != null
+            ? transitionLeftButt
+            : GetButtieTransformOrNull(0);
+
+        Transform rightSource = transitionRightButt != null
+            ? transitionRightButt
+            : GetButtieTransformOrNull(1);
+
+        ButtSceneTransitionCarry carry = ButtSceneTransitionCarry.Create(
+            leftSource,
+            rightSource,
+            gameLoopSceneName,
+            holdBeforeConvergeDuration,
+            convergeDuration,
+            autoStartDelay,
+            convergeEase);
+
+        carry.StartTransition();
+    }
+
+    private Transform GetButtieTransformOrNull(int index)
+    {
+        if (introButties == null || index < 0 || index >= introButties.Length || introButties[index] == null)
+        {
+            return null;
+        }
+
+        return introButties[index].transform;
     }
 }

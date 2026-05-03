@@ -86,6 +86,8 @@ public class GameLoopController : MonoBehaviour
     public int TargetScore => targetScore;
     public int MaxMinusScore => maxMinusScore;
     public float ScoreThresholdRatio => scoreThresholdRatio;
+    public Transform LeftButtTransform => leftButt;
+    public Transform RightButtTransform => rightButt;
     public ButtTarget CurrentTarget => currentTarget;
     public bool IsRunning => state == LoopState.Running;
     public string LastJudgementMessage => lastJudgementMessage;
