@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec669293efd13b0488d72a4bd0b0be58, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: Assembly-CSharp::ExpressionPreset
+  clearUnspecifiedSlots: 1
+  spriteStates:
+  - slotId: Eye
+    sprite: {fileID: 215727064, guid: c2d7a7ab832ea0949968b8a4ee0cedcd, type: 3}
+    visible: 1
+    copyFromGameObject: {fileID: 0}
+    transformJson: UnityEditor.TransformWorldPlacementJSON:{"position":{"x":-0.5472598075866699,"y":1.6200000047683716,"z":-5.063370227813721},"rotation":{"x":0.009861803613603115,"y":-0.0016515785828232766,"z":0.14422361552715302,"w":0.9894946217536926},"scale":{"x":0.07999999821186066,"y":0.07999999821186066,"z":0.07999999821186066}}
+    useWorldTransform: 1
+    localPosition: {x: -0.5472598, y: 1.62, z: -5.06337}
+    localEulerAngles: {x: 1.1455792, y: 359.9757, z: 16.585238}
+    localScale: {x: 0.08, y: 0.08, z: 0.08}
+    color: {r: 1, g: 1, b: 1, a: 1}

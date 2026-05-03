@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efb014980771f2848a2bfcedd6f236a7
+guid: 730dcb3fe161a4f4290978efb03fe4b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uB180\uB78C2_0"
+      name: "\uBE14\uB7EC\uC26C_0"
       rect:
         serializedVersion: 2
-        x: 35
-        y: 33
-        width: 432
-        height: 433
+        x: 66
+        y: 173
+        width: 376
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +125,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcc461c47825a54bac80b161e596935
-      internalID: 1495607818
+      spriteID: 865759a41b5a58e4696a307a6029b7d8
+      internalID: -81127791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE14\uB7EC\uC26C_1"
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 344
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcfbeef752486349a1d9ad6545c741f
+      internalID: -1948389110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE14\uB7EC\uC26C_2"
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 297
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ad878d208b1544aae4567b77319ff0
+      internalID: 110639068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE14\uB7EC\uC26C_3"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 259
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b44dd2a595fa2439438a107e62c115
+      internalID: -1397019376
       vertices: []
       indices: 
       edges: []
@@ -135,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 414c26bc065648f4ea5bcaaba7cb02eb
+    spriteID: fbd7f99a31615864780508d53f2692f6
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +213,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\uB180\uB78C2_0": 1495607818
+      "\uBE14\uB7EC\uC26C_0": -81127791
+      "\uBE14\uB7EC\uC26C_1": -1948389110
+      "\uBE14\uB7EC\uC26C_2": 110639068
+      "\uBE14\uB7EC\uC26C_3": -1397019376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

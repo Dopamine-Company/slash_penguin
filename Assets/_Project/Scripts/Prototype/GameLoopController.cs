@@ -69,18 +69,23 @@ public class GameLoopController : MonoBehaviour
     [SerializeField] private string minusScorePrefix = "Miss: ";
 
     [Header("Events")]
-    public IntEvent OnScoreIncreased;
-    public IntEvent OnMinusScoreIncreased;
-    public UnityEvent OnScoreThresholdReached;
-    public UnityEvent OnSuccessGameEnd;
-    public UnityEvent OnFailGameEnd;
-    public ButtTargetEvent OnBeatStarted;
-    public UnityEvent OnTargetHitWindowClosed;
-    public UnityEvent OnBeatEnded;
-    public StringEvent OnJudgementMessage;
+    public IntEvent OnScoreIncreased = new IntEvent();
+    public IntEvent OnMinusScoreIncreased = new IntEvent();
+    public UnityEvent OnScoreThresholdReached = new UnityEvent();
+    public UnityEvent OnSuccessGameEnd = new UnityEvent();
+    public UnityEvent OnFailGameEnd = new UnityEvent();
+    public UnityEvent OnGameLoopStarted = new UnityEvent();
+    public UnityEvent OnGameLoopReset = new UnityEvent();
+    public ButtTargetEvent OnBeatStarted = new ButtTargetEvent();
+    public UnityEvent OnTargetHitWindowClosed = new UnityEvent();
+    public UnityEvent OnBeatEnded = new UnityEvent();
+    public StringEvent OnJudgementMessage = new StringEvent();
 
     public int Score => score;
     public int MinusScore => minusScore;
+    public int TargetScore => targetScore;
+    public int MaxMinusScore => maxMinusScore;
+    public float ScoreThresholdRatio => scoreThresholdRatio;
     public ButtTarget CurrentTarget => currentTarget;
     public bool IsRunning => state == LoopState.Running;
     public string LastJudgementMessage => lastJudgementMessage;
@@ -150,6 +155,7 @@ public class GameLoopController : MonoBehaviour
         state = LoopState.Running;
         loopStartTime = Time.time;
         loopCoroutine = StartCoroutine(GameLoopRoutine());
+        OnGameLoopStarted?.Invoke();
     }
 
     public void StopGameLoop()
@@ -176,6 +182,7 @@ public class GameLoopController : MonoBehaviour
 
         SetButtScales(inactiveScale, inactiveScale);
         RefreshScoreText();
+        OnGameLoopReset?.Invoke();
     }
 
     public void RegisterButtHit(ButtTarget hitTarget)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efb014980771f2848a2bfcedd6f236a7
+guid: 4bae382c95ac01b4bae0452bed149679
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,13 +43,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 66, y: 62, z: 35, w: 58}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uB180\uB78C2_0"
+      name: "\uBE60\uC9C1_0"
       rect:
         serializedVersion: 2
-        x: 35
-        y: 33
-        width: 432
-        height: 433
+        x: 89
+        y: 249
+        width: 157
+        height: 178
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +125,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fcc461c47825a54bac80b161e596935
-      internalID: 1495607818
+      spriteID: 5764fc69089371443bae3582d1fcda56
+      internalID: -919293525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE60\uC9C1_1"
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 279
+        width: 161
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ed9b737dc124c41b4457dc11776ca9
+      internalID: 204079747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE60\uC9C1_2"
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 79
+        width: 165
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96392338144e2874287e9be3860d669f
+      internalID: -536617434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uBE60\uC9C1_3"
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 95
+        width: 145
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7056abf2072261345b60f8ff5686a703
+      internalID: 1076850359
       vertices: []
       indices: 
       edges: []
@@ -135,8 +201,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 414c26bc065648f4ea5bcaaba7cb02eb
-    internalID: 0
+    spriteID: 2cc491f58469b6945ad479fb82b84b33
+    internalID: -717706965
     vertices: []
     indices: 
     edges: []
@@ -147,7 +213,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\uB180\uB78C2_0": 1495607818
+      "\uBE60\uC9C1_0": -919293525
+      "\uBE60\uC9C1_1": 204079747
+      "\uBE60\uC9C1_2": -536617434
+      "\uBE60\uC9C1_3": 1076850359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
