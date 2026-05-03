@@ -1988,6 +1988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExpressionRuleController
   gameLoopController: {fileID: 1567073954}
   expressionController: {fileID: 255228847}
+  fallbackPersistentPreset: {fileID: 11400000, guid: d71293092e62a3840a8990162014538d, type: 2}
   scorePersistentRules:
   - minScoreRatio: 0
     maxScoreRatio: 0.7

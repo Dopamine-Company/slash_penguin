@@ -25,6 +25,7 @@ public class ExpressionRuleController : MonoBehaviour
     [SerializeField] private ExpressionController expressionController;
 
     [Header("Score Expressions")]
+    [SerializeField] private ExpressionPreset fallbackPersistentPreset;
     [SerializeField] private List<ScorePersistentRule> scorePersistentRules = new List<ScorePersistentRule>();
     [SerializeField] private ExpressionPreset earlyCorrectHitPreset;
     [SerializeField] private ExpressionPreset lateCorrectHitPreset;
@@ -154,6 +155,19 @@ public class ExpressionRuleController : MonoBehaviour
         {
             expressionController.ApplyPersistent(preset);
         }
+        else if (fallbackPersistentPreset != null)
+        {
+            expressionController.ApplyPersistent(fallbackPersistentPreset);
+        }
+        else
+        {
+            ExpressionPreset firstPreset = FindFirstScorePersistentPreset();
+
+            if (firstPreset != null)
+            {
+                expressionController.ApplyPersistent(firstPreset);
+            }
+        }
     }
 
     private bool IsPastScoreThreshold(int score)
@@ -179,6 +193,21 @@ public class ExpressionRuleController : MonoBehaviour
             }
 
             if (scoreRatio >= rule.minScoreRatio && scoreRatio < rule.maxScoreRatio)
+            {
+                return rule.persistentPreset;
+            }
+        }
+
+        return null;
+    }
+
+    private ExpressionPreset FindFirstScorePersistentPreset()
+    {
+        for (int i = 0; i < scorePersistentRules.Count; i++)
+        {
+            ScorePersistentRule rule = scorePersistentRules[i];
+
+            if (rule != null && rule.persistentPreset != null)
             {
                 return rule.persistentPreset;
             }

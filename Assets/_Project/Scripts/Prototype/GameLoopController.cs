@@ -80,6 +80,8 @@ public class GameLoopController : MonoBehaviour
     public UnityEvent OnTargetHitWindowClosed = new UnityEvent();
     public UnityEvent OnBeatEnded = new UnityEvent();
     public StringEvent OnJudgementMessage = new StringEvent();
+    public ButtTargetEvent OnCorrectButtHit = new ButtTargetEvent();
+    public ButtTargetEvent OnPenalty = new ButtTargetEvent();
 
     public int Score => score;
     public int MinusScore => minusScore;
@@ -197,22 +199,31 @@ public class GameLoopController : MonoBehaviour
 
         if (hitTarget == ButtTarget.None || hitTarget == ButtTarget.Both)
         {
-            RegisterMinusScore($"Miss: invalid hit target {hitTarget}.");
+            RegisterMinusScore($"Miss: invalid hit target {hitTarget}.", hitTarget);
             ResolveBeat();
             return;
         }
 
         if (!IsHitAllowedForCurrentTarget(hitTarget))
         {
-            RegisterMinusScore($"Miss: hit {hitTarget}, target was {currentTarget}.");
+            RegisterMinusScore($"Miss: hit {hitTarget}, target was {currentTarget}.", hitTarget);
             ResolveBeat();
             return;
         }
 
         if (currentTarget == ButtTarget.Both && bothRequiresBothHits)
         {
+            bool wasNewCorrectHit =
+                hitTarget == ButtTarget.Left && !leftHitThisBeat ||
+                hitTarget == ButtTarget.Right && !rightHitThisBeat;
+
             leftHitThisBeat |= hitTarget == ButtTarget.Left;
             rightHitThisBeat |= hitTarget == ButtTarget.Right;
+
+            if (wasNewCorrectHit)
+            {
+                OnCorrectButtHit?.Invoke(hitTarget);
+            }
 
             if (leftHitThisBeat && rightHitThisBeat)
             {
@@ -227,6 +238,7 @@ public class GameLoopController : MonoBehaviour
             return;
         }
 
+        OnCorrectButtHit?.Invoke(hitTarget);
         RegisterScore($"Good: hit {hitTarget}, target was {currentTarget}.");
         ResolveBeat();
     }
@@ -256,7 +268,7 @@ public class GameLoopController : MonoBehaviour
 
             if (!isBeatResolved)
             {
-                RegisterMinusScore($"Miss: target {currentTarget} timed out.");
+                RegisterMinusScore($"Miss: target {currentTarget} timed out.", currentTarget);
                 ResolveBeat();
             }
 
@@ -323,12 +335,13 @@ public class GameLoopController : MonoBehaviour
         CheckScoreThreshold();
     }
 
-    private void RegisterMinusScore(string reason)
+    private void RegisterMinusScore(string reason, ButtTarget penaltyTarget)
     {
         minusScore++;
         RefreshScoreText();
         SetJudgementMessage(reason);
         OnMinusScoreIncreased?.Invoke(minusScore);
+        OnPenalty?.Invoke(penaltyTarget);
     }
 
     private void CheckScoreThreshold()
