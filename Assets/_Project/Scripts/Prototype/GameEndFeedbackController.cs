@@ -9,6 +9,10 @@ public class GameEndFeedbackController : MonoBehaviour
     [Header("Game Loop")]
     [SerializeField] private GameLoopController gameLoopController;
     [SerializeField] private string startSceneName = "Start";
+    [SerializeField] private bool disableJellyInputOnEnd = true;
+
+    [Header("Success Input Gate")]
+    [SerializeField] private bool waitForPointerReleaseBeforeSuccess = true;
 
     [Header("Success Shake")]
     [SerializeField] private Transform[] successShakeTargets;
@@ -20,11 +24,21 @@ public class GameEndFeedbackController : MonoBehaviour
 
     [Header("Success Rainbow")]
     [SerializeField] private Renderer[] rainbowRenderers;
+    [SerializeField] private bool tintRainbowRenderers;
+    [SerializeField] private ButtGlowSpriteController buttGlowSpriteController;
     [SerializeField] private float rainbowDuration = 1.25f;
     [SerializeField] private float rainbowPulseInterval = 0.09f;
     [SerializeField] private float rainbowBrightness = 2.5f;
     [SerializeField] private float finalWhiteGlowDuration = 0.55f;
     [SerializeField] private float finalWhiteBrightness = 5f;
+
+    [Header("Success Glow Lights")]
+    [SerializeField] private Light[] successGlowLights;
+    [SerializeField] private bool createGlowLightsFromRainbowRenderers = true;
+    [SerializeField] private float glowLightIntensity = 2.2f;
+    [SerializeField] private float finalGlowLightIntensity = 6f;
+    [SerializeField] private float glowLightRange = 2.4f;
+    [SerializeField] private float glowPulseScale = 0.35f;
 
     [Header("Success White Screen")]
     [SerializeField] private Image successWhiteOverlay;
@@ -38,6 +52,9 @@ public class GameEndFeedbackController : MonoBehaviour
     [SerializeField] private float failDelay = 0.7f;
     [SerializeField] private float failPopDuration = 0.16f;
     [SerializeField] private float failHoldDuration = 0.25f;
+    [SerializeField] private float failWhiteOutDelay = 0.05f;
+    [SerializeField] private float failWhiteOutDuration = 0.55f;
+    [SerializeField] private float failWhiteOutHoldDuration = 0.12f;
     [SerializeField] private Vector3 failPopStartScale = new Vector3(0.78f, 0.78f, 1f);
     [SerializeField] private Vector3 failPopOvershootScale = new Vector3(1.08f, 1.08f, 1f);
 
@@ -56,6 +73,7 @@ public class GameEndFeedbackController : MonoBehaviour
     private MaterialPropertyBlock propertyBlock;
     private Coroutine endRoutine;
     private bool endingStarted;
+    private readonly System.Collections.Generic.List<Light> runtimeGlowLights = new System.Collections.Generic.List<Light>();
 
     private void Awake()
     {
@@ -120,9 +138,19 @@ public class GameEndFeedbackController : MonoBehaviour
         HideOverlay(failPoopOverlay);
         HideOverlay(successWhiteOverlay);
 
+        if (waitForPointerReleaseBeforeSuccess)
+        {
+            yield return WaitForPointerRelease();
+        }
+
+        DisableJellyInputs();
+
         Sequence sequence = DOTween.Sequence();
+        EnsureGlowLights();
         AddShakeTweens(sequence);
+        AddGlowSpriteTween(sequence);
         AddRainbowTweens(sequence);
+        AddGlowLightTweens(sequence);
         AddSuccessWhiteOverlayTween(sequence);
 
         yield return sequence.WaitForCompletion();
@@ -136,6 +164,7 @@ public class GameEndFeedbackController : MonoBehaviour
         EnsureOverlayImages();
         HideOverlay(successWhiteOverlay);
         HideOverlay(failPoopOverlay);
+        DisableJellyInputs();
 
         yield return new WaitForSeconds(failDelay);
 
@@ -162,6 +191,21 @@ public class GameEndFeedbackController : MonoBehaviour
 
         yield return sequence.WaitForCompletion();
         yield return new WaitForSeconds(failHoldDuration);
+
+        if (successWhiteOverlay != null)
+        {
+            yield return new WaitForSeconds(failWhiteOutDelay);
+            ShowOverlay(successWhiteOverlay, 0f);
+            yield return DOTween
+                .To(
+                    () => successWhiteOverlay.color.a,
+                    alpha => SetOverlayAlpha(successWhiteOverlay, alpha),
+                    1f,
+                    failWhiteOutDuration)
+                .SetEase(Ease.InQuad)
+                .WaitForCompletion();
+            yield return new WaitForSeconds(failWhiteOutHoldDuration);
+        }
 
         LoadStartSceneWithReturnMove();
     }
@@ -202,7 +246,7 @@ public class GameEndFeedbackController : MonoBehaviour
 
     private void AddRainbowTweens(Sequence sequence)
     {
-        if (sequence == null || rainbowRenderers == null || rainbowRenderers.Length == 0)
+        if (!tintRainbowRenderers || sequence == null || rainbowRenderers == null || rainbowRenderers.Length == 0)
         {
             return;
         }
@@ -223,6 +267,59 @@ public class GameEndFeedbackController : MonoBehaviour
             () => 0f,
             value => ApplyRendererColor(Color.Lerp(Color.white * rainbowBrightness, Color.white * finalWhiteBrightness, value)),
             1f,
+            finalWhiteGlowDuration));
+    }
+
+    private void AddGlowSpriteTween(Sequence sequence)
+    {
+        if (sequence == null || buttGlowSpriteController == null)
+        {
+            return;
+        }
+
+        Sequence glowSequence = buttGlowSpriteController.PlayGlow();
+        if (glowSequence != null)
+        {
+            sequence.Join(glowSequence);
+        }
+    }
+
+    private void AddGlowLightTweens(Sequence sequence)
+    {
+        if (sequence == null || successGlowLights == null || successGlowLights.Length == 0)
+        {
+            return;
+        }
+
+        foreach (Light glowLight in successGlowLights)
+        {
+            if (glowLight == null)
+            {
+                continue;
+            }
+
+            glowLight.enabled = true;
+            glowLight.range = glowLightRange;
+            glowLight.intensity = 0f;
+        }
+
+        float elapsed = 0f;
+        int colorIndex = 0;
+
+        while (elapsed < rainbowDuration)
+        {
+            Color color = rainbowColors[colorIndex % rainbowColors.Length];
+            float pulseIntensity = glowLightIntensity * (1f + glowPulseScale * Mathf.Sin(colorIndex));
+            sequence.InsertCallback(elapsed, () => ApplyGlowLight(color, pulseIntensity, glowLightRange));
+
+            elapsed += Mathf.Max(0.01f, rainbowPulseInterval);
+            colorIndex++;
+        }
+
+        sequence.Insert(rainbowDuration, DOTween.To(
+            () => glowLightIntensity,
+            value => ApplyGlowLight(Color.white, value, glowLightRange * 1.25f),
+            finalGlowLightIntensity,
             finalWhiteGlowDuration));
     }
 
@@ -267,6 +364,63 @@ public class GameEndFeedbackController : MonoBehaviour
         }
     }
 
+    private void ApplyGlowLight(Color color, float intensity, float range)
+    {
+        if (successGlowLights == null)
+        {
+            return;
+        }
+
+        foreach (Light glowLight in successGlowLights)
+        {
+            if (glowLight == null)
+            {
+                continue;
+            }
+
+            glowLight.color = color;
+            glowLight.intensity = intensity;
+            glowLight.range = range;
+        }
+    }
+
+    private void EnsureGlowLights()
+    {
+        if (!createGlowLightsFromRainbowRenderers || successGlowLights != null && successGlowLights.Length > 0)
+        {
+            return;
+        }
+
+        if (rainbowRenderers == null || rainbowRenderers.Length == 0)
+        {
+            return;
+        }
+
+        runtimeGlowLights.Clear();
+        foreach (Renderer targetRenderer in rainbowRenderers)
+        {
+            if (targetRenderer == null)
+            {
+                continue;
+            }
+
+            GameObject lightObject = new GameObject(targetRenderer.name + " Success Glow Light");
+            lightObject.transform.SetParent(targetRenderer.transform, false);
+            lightObject.transform.position = targetRenderer.bounds.center;
+
+            Light glowLight = lightObject.AddComponent<Light>();
+            glowLight.type = LightType.Point;
+            glowLight.color = Color.white;
+            glowLight.intensity = 0f;
+            glowLight.range = glowLightRange;
+            glowLight.shadows = LightShadows.None;
+
+            runtimeGlowLights.Add(glowLight);
+        }
+
+        successGlowLights = runtimeGlowLights.ToArray();
+    }
+
     private void EnsureOverlayImages()
     {
         if (successWhiteOverlay == null)
@@ -278,6 +432,9 @@ public class GameEndFeedbackController : MonoBehaviour
         {
             failPoopOverlay = CreateOverlayImage("Fail Poop Overlay", Color.white);
         }
+
+        SetOverlaySortingOrder(successWhiteOverlay, 30001);
+        SetOverlaySortingOrder(failPoopOverlay, 30000);
 
         if (failPoopSprite != null && failPoopOverlay != null)
         {
@@ -308,6 +465,45 @@ public class GameEndFeedbackController : MonoBehaviour
         rectTransform.localScale = Vector3.one;
 
         return image;
+    }
+
+    private IEnumerator WaitForPointerRelease()
+    {
+        while (Input.GetMouseButton(0) || Input.touchCount > 0)
+        {
+            yield return null;
+        }
+    }
+
+    private void DisableJellyInputs()
+    {
+        if (!disableJellyInputOnEnd)
+        {
+            return;
+        }
+
+        JellySwipeSphere[] jellyInputs = FindObjectsOfType<JellySwipeSphere>();
+        foreach (JellySwipeSphere jellyInput in jellyInputs)
+        {
+            if (jellyInput != null)
+            {
+                jellyInput.enabled = false;
+            }
+        }
+    }
+
+    private static void SetOverlaySortingOrder(Image image, int sortingOrder)
+    {
+        if (image == null)
+        {
+            return;
+        }
+
+        Canvas canvas = image.GetComponentInParent<Canvas>();
+        if (canvas != null)
+        {
+            canvas.sortingOrder = sortingOrder;
+        }
     }
 
     private static void ShowOverlay(Image image, float alpha)
