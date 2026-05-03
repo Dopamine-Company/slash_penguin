@@ -105,10 +105,10 @@ InitTestScene*.unity*
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
+<<<<<<< Updated upstream
 # Local AI/editor tooling state
 /.agents/
 /.claude/settings.local.json
-/.mcp.json
 
 # IDE/editor local state
 .idea/
@@ -122,3 +122,11 @@ InitTestScene*.unity*
 /[Bb]uild[Rr]eports/
 /[Cc]rash[Rr]eports/
 /[Uu]ser[Ss]ettings/
+
+# Local MCP config (may contain secrets / machine paths)
+.mcp.json
+/.mcp.json
+=======
+# Local MCP config (contains secrets)
+.mcp.json
+>>>>>>> Stashed changes
