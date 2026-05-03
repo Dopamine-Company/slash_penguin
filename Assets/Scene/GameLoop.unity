@@ -1504,6 +1504,7 @@ GameObject:
   - component: {fileID: 1567073955}
   - component: {fileID: 1567073954}
   - component: {fileID: 1567073956}
+  - component: {fileID: 1567073957}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1635,6 +1636,47 @@ MonoBehaviour:
     duration: 0.6
   successPersistentPreset: {fileID: 11400000, guid: 94b41c325fdb88341aaa5047a6b5164f, type: 2}
   failPersistentPreset: {fileID: 11400000, guid: 057e2619fa9539646a97bd000df8b50f, type: 2}
+--- !u!114 &1567073957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567073953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145c3401f7a541d8bc6842f97e67071e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEndFeedbackController
+  gameLoopController: {fileID: 1567073954}
+  startSceneName: Start
+  successShakeTargets:
+  - {fileID: 1403869274}
+  - {fileID: 497669716}
+  successPunchPosition: {x: 0, y: 0.05, z: 0}
+  successPunchRotation: {x: 0, y: 0, z: 7}
+  successShakeDuration: 1.2
+  successVibrato: 18
+  successElasticity: 0.75
+  rainbowRenderers:
+  - {fileID: 17482372}
+  - {fileID: 186040434}
+  rainbowDuration: 1.25
+  rainbowPulseInterval: 0.09
+  rainbowBrightness: 2.5
+  finalWhiteGlowDuration: 0.55
+  finalWhiteBrightness: 5
+  successWhiteOverlay: {fileID: 0}
+  successWhiteFadeDelay: 0.75
+  successWhiteFadeDuration: 0.75
+  successWhiteHoldDuration: 0.15
+  failPoopOverlay: {fileID: 0}
+  failPoopSprite: {fileID: 0}
+  failDelay: 0.7
+  failPopDuration: 0.16
+  failHoldDuration: 0.25
+  failPopStartScale: {x: 0.78, y: 0.78, z: 1}
+  failPopOvershootScale: {x: 1.08, y: 1.08, z: 1}
 --- !u!1 &1712894622
 GameObject:
   m_ObjectHideFlags: 0

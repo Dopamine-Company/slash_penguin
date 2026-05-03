@@ -23,6 +23,9 @@ public class Intro : MonoBehaviour
     [SerializeField] private float zoomOutDuration = 1f;
     [Header("IntroButtiesScale")]
     [SerializeField] private float introButtiesZoomInScaleMultiplier = 1.08f;
+    [Header("Surprise Reaction")]
+    [SerializeField] private PenguinSurpriseReactionController surpriseReaction;
+    [SerializeField] private bool playSurpriseBeforeZoomIn = true;
     [Header("Scene Transition")]
     [SerializeField] private bool loadGameLoopWhenZoomInComplete = true;
     [SerializeField] private string gameLoopSceneName = "GameLoop";
@@ -62,7 +65,7 @@ public class Intro : MonoBehaviour
         }
 
         _introStarted = true;
-        RunIntroCamera();
+        PlaySurpriseThenRunIntroCamera();
     }
 
     private void RunIntroCamera()
@@ -269,6 +272,17 @@ public class Intro : MonoBehaviour
         }
 
         _introStarted = true;
+        PlaySurpriseThenRunIntroCamera();
+    }
+
+    private void PlaySurpriseThenRunIntroCamera()
+    {
+        if (playSurpriseBeforeZoomIn && surpriseReaction != null)
+        {
+            surpriseReaction.Play(RunIntroCamera);
+            return;
+        }
+
         RunIntroCamera();
     }
 
