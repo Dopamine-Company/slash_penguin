@@ -6,6 +6,10 @@ public class ButtHitFlashController : MonoBehaviour
     [Header("Game Loop")]
     [SerializeField] private GameLoopController gameLoopController;
 
+    [Header("Spheres")]
+    [SerializeField] private JellySwipeSphere leftSwipeSphere;
+    [SerializeField] private JellySwipeSphere rightSwipeSphere;
+
     [Header("Anchors")]
     [SerializeField] private Transform leftButtAnchor;
     [SerializeField] private Transform rightButtAnchor;
@@ -21,7 +25,6 @@ public class ButtHitFlashController : MonoBehaviour
     private SpriteRenderer _rightRenderer;
     private Coroutine _leftCoroutine;
     private Coroutine _rightCoroutine;
-    private ButtTarget _currentTarget;
 
     private void Awake()
     {
@@ -34,31 +37,26 @@ public class ButtHitFlashController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (gameLoopController == null) return;
-        gameLoopController.OnCorrectButtHit.AddListener(HandleHit);
-        gameLoopController.OnBeatStarted.AddListener(HandleBeatStarted);
+        if (leftSwipeSphere != null) leftSwipeSphere.onPhysicalContact.AddListener(HandleLeftContact);
+        if (rightSwipeSphere != null) rightSwipeSphere.onPhysicalContact.AddListener(HandleRightContact);
     }
 
     private void OnDisable()
     {
-        if (gameLoopController == null) return;
-        gameLoopController.OnCorrectButtHit.RemoveListener(HandleHit);
-        gameLoopController.OnBeatStarted.RemoveListener(HandleBeatStarted);
+        if (leftSwipeSphere != null) leftSwipeSphere.onPhysicalContact.RemoveListener(HandleLeftContact);
+        if (rightSwipeSphere != null) rightSwipeSphere.onPhysicalContact.RemoveListener(HandleRightContact);
     }
 
-    private void HandleBeatStarted(ButtTarget target)
-    {
-        _currentTarget = target;
-    }
-
-    private void HandleHit(ButtTarget target)
+    private void HandleLeftContact()
     {
         FaceCamera();
-        ButtTarget flashTarget = _currentTarget == ButtTarget.Both ? ButtTarget.Both : target;
-        if (flashTarget == ButtTarget.Left || flashTarget == ButtTarget.Both)
-            TriggerFlash(ref _leftCoroutine, _leftRenderer);
-        if (flashTarget == ButtTarget.Right || flashTarget == ButtTarget.Both)
-            TriggerFlash(ref _rightCoroutine, _rightRenderer);
+        TriggerFlash(ref _leftCoroutine, _leftRenderer);
+    }
+
+    private void HandleRightContact()
+    {
+        FaceCamera();
+        TriggerFlash(ref _rightCoroutine, _rightRenderer);
     }
 
     private void TriggerFlash(ref Coroutine coroutine, SpriteRenderer sr)

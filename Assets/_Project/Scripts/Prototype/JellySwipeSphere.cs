@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class JellySwipeSphere : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class JellySwipeSphere : MonoBehaviour
     [SerializeField] private BodyReactionController bodyReaction;
     [SerializeField] private GameLoopController gameLoopController;
     [SerializeField] private ButtTarget buttTarget = ButtTarget.None;
+
+    public UnityEvent onPhysicalContact;
 
     private Collider targetCollider;
     private Vector2 pointerDownPosition;
@@ -124,6 +127,7 @@ public class JellySwipeSphere : MonoBehaviour
 
         if (didPointerTouchThisSphere)
         {
+            onPhysicalContact?.Invoke();
             RegisterButtHit();
         }
     }
@@ -139,6 +143,7 @@ public class JellySwipeSphere : MonoBehaviour
 
         if (didPointerTouchThisSphere)
         {
+            onPhysicalContact?.Invoke();
             RegisterButtHit();
         }
     }
