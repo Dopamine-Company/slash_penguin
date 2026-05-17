@@ -57,6 +57,7 @@ public class GameEndFeedbackController : MonoBehaviour
     [SerializeField] private float failWhiteOutHoldDuration = 0.12f;
     [SerializeField] private Vector3 failPopStartScale = new Vector3(0.78f, 0.78f, 1f);
     [SerializeField] private Vector3 failPopOvershootScale = new Vector3(1.08f, 1.08f, 1f);
+    [SerializeField] private Color failPoopColor = Color.white;
 
     private readonly Color[] rainbowColors =
     {
@@ -430,7 +431,7 @@ public class GameEndFeedbackController : MonoBehaviour
 
         if (failPoopOverlay == null)
         {
-            failPoopOverlay = CreateOverlayImage("Fail Poop Overlay", Color.white);
+            failPoopOverlay = CreateOverlayImage("Fail Poop Overlay", failPoopColor);
         }
 
         SetOverlaySortingOrder(successWhiteOverlay, 30001);
@@ -439,6 +440,7 @@ public class GameEndFeedbackController : MonoBehaviour
         if (failPoopSprite != null && failPoopOverlay != null)
         {
             failPoopOverlay.sprite = failPoopSprite;
+            failPoopOverlay.color = failPoopColor;
         }
     }
 
